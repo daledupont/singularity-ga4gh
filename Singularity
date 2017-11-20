@@ -22,7 +22,7 @@ From: ubuntu:latest
 
     # copy the modified files
     cp /config/requirements.txt  /srv/ga4gh-server/requirements.txt
-    cp /config/frontend.py  /srv/ga4gh-server/ga4gh/sever/frontend.py
+    cp /config/frontend.py  /srv/ga4gh-server/ga4gh/server/frontend.py
     cp /config/serverconfig.py  /srv/ga4gh-server/ga4gh/server/serverconfig.py
     cp /config/application.wsgi  /srv/ga4gh-server/deploy/application.wsgi
     cp /config/001-ga4gh.conf  /srv/ga4gh-server/deploy/001-ga4gh.conf
