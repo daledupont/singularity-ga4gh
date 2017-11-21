@@ -18,7 +18,7 @@ From: ubuntu:latest
 
     #mv /ga4gh-server /srv
 
-    git clone https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
+    git clone -b authentication https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
 
     # copy the modified files
     mv /config/requirements.txt  /srv/ga4gh-server/requirements.txt
