@@ -21,15 +21,15 @@ From: ubuntu:latest
     git clone https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
 
     # copy the modified files
-    cp /config/requirements.txt  /srv/ga4gh-server/requirements.txt
-    cp /config/frontend.py  /srv/ga4gh-server/ga4gh/server/frontend.py
-    cp /config/serverconfig.py  /srv/ga4gh-server/ga4gh/server/serverconfig.py
-    cp /config/application.wsgi  /srv/ga4gh-server/deploy/application.wsgi
-    cp /config/001-ga4gh.conf  /srv/ga4gh-server/deploy/001-ga4gh.conf
-    cp /config/dataPrep.py  /srv/ga4gh-server/dataPrep.py
-    cp /config/config.py    /srv/ga4gh-server/deploy/config.py
-    cp /config/ports.conf /srv/ga4gh-server/deploy/ports.conf
-    cp /config/client_secrets.json /srv/ga4gh-server/client_secrets.json
+    mv /config/requirements.txt  /srv/ga4gh-server/requirements.txt
+    mv /config/frontend.py  /srv/ga4gh-server/ga4gh/server/frontend.py
+    mv /config/serverconfig.py  /srv/ga4gh-server/ga4gh/server/serverconfig.py
+    mv /config/application.wsgi  /srv/ga4gh-server/deploy/application.wsgi
+    mv /config/001-ga4gh.conf  /srv/ga4gh-server/deploy/001-ga4gh.conf
+    mv /config/dataPrep.py  /srv/ga4gh-server/dataPrep.py
+    mv /config/config.py    /srv/ga4gh-server/deploy/config.py
+    mv /config/ports.conf /srv/ga4gh-server/deploy/ports.conf
+    mv /config/client_secrets.json /srv/ga4gh-server/client_secrets.json
 
     rm -r /config
 
@@ -45,7 +45,7 @@ From: ubuntu:latest
     # prepare sample/compliance data
     cd /srv/ga4gh-server/scripts
 
-    python prepare_compliance_data.py -o ../../ga4gh-compliance-data
+    python prepare_compliance_data.py -o /srv/ga4gh-compliance-data
 
 %runscript
 
