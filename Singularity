@@ -18,7 +18,7 @@ From: ubuntu:latest
 
     #mv /ga4gh-server /srv
 
-    git clone -b authentication https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
+    git clone -b auth-deploy-fixes https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
 
     rm /srv/ga4gh-server/ga4gh/server/serverconfig.py
     rm /srv/ga4gh-server/ga4gh/server/frontend.py
