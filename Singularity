@@ -13,9 +13,6 @@ From: ubuntu:latest
 
     git clone -b auth-deploy-fixes https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
 
-    # copy the modified files
-    cp "${GA4GH_CLIENT_SECRET}" /srv/ga4gh-server/client_secrets.json
-
     # install python package requirements
     pip install -r /srv/ga4gh-server/requirements.txt
 
@@ -28,4 +25,4 @@ From: ubuntu:latest
 
 %runscript
 
-    exec ga4gh_server -P "${GA4GH_PORT}" -H "${GA4GH_IP}"
+    exec ga4gh_server -P "${GA4GH_PORT}" -H "${GA4GH_IP}" -f "${GA4GH_CONFIG}"
