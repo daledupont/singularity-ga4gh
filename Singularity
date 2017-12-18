@@ -11,7 +11,7 @@ From: ubuntu:latest
 
     mkdir -p /srv/ga4gh-server
 
-    git clone -b auth-deploy-fixes https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
+    git clone -b auth-deploy-stable-test https://github.com/Bio-Core/ga4gh-server.git /srv/ga4gh-server
 
     # install python package requirements
     pip install -r /srv/ga4gh-server/requirements.txt
